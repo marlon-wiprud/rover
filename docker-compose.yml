@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  publisher:
+    restart: on-failure
+    build:
+      context: .
+      dockerfile: publisher.Dockerfile
+
+  subscriber:
+    restart: on-failure
+    build:
+      context: .
+      dockerfile: subscriber.Dockerfile
